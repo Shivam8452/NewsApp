@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 export default class News extends Component {
   static defaultProps = {
     country: 'in',
-    pageSize: 20,
+    pageSize: 21,
     category: 'general'
   }
   static propTypes = {
@@ -81,7 +81,7 @@ export default class News extends Component {
   render() {
     return (
        <div className="container my-3">
-       <h1 className='text-center'>NewsApp - Top {this.capitalize(this.props.category)} Headlines</h1>
+       <h1 className='text-center' style={{marginTop: '80px'}}>NewsApp - Top {this.capitalize(this.props.category)} Headlines</h1>
        {this.state.loading && <Spinner/>}
           <div className="row">
        {!this.state.loading && this.state.articles.map((element)=>{
